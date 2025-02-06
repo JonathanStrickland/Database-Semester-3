@@ -1,0 +1,4 @@
+1. Update one of the students emails
+
+UPDATE students SET email = 'alicej@hotmail.com'
+WHERE student_id = 1;

@@ -1,0 +1,16 @@
+1. Retrieve the full names of all students enrolled in “Physics 101”
+
+SELECT first_name || ' ' || last_name AS full_name, course_name FROM students
+JOIN enrollments ON students.student_id = enrollments.student_id
+JOIN courses ON enrollments.course_id = courses.course_id
+WHERE courses.course_name = 'Physics 101';
+
+2. Retrieve a list of all courses along with the professor’s full name who teaches each course
+
+SELECT course_name, first_name || ' ' || last_name AS professor_name FROM courses
+JOIN professors ON courses.professor_id = professors.professor_id;
+
+3. Retrieve all courses that have students enrolled in them
+
+SELECT DISTINCT course_name FROM courses
+JOIN enrollments ON courses.course_id = enrollments.course_id;

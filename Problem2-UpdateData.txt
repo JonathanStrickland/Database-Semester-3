@@ -1,0 +1,9 @@
+Perform an update to simulate the reducing of stock quantities of items after a customer places an order.
+
+UPDATE products SET stock_quantity = stock_quantity - 2 WHERE product_id = 1;
+UPDATE products SET stock_quantity = stock_quantity - 5 WHERE product_id = 2;
+UPDATE products SET stock_quantity = stock_quantity - 4 WHERE product_id = 3;
+UPDATE products SET stock_quantity = stock_quantity - 2 WHERE product_id = 4;
+UPDATE products SET stock_quantity = stock_quantity - 4 WHERE product_id = 5;
+
+Updates all stock_quantity as i have orders for all of them
